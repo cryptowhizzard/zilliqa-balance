@@ -31,7 +31,7 @@ def main():
 
 
 def print_balances(filename):
-    addresses = file(filename).read().strip().split("\n")
+    addresses = open(filename).read().strip().split("\n")
     total = 0
     pool = multiprocessing.Pool(40)
     results = pool.map(get_balance, addresses)
