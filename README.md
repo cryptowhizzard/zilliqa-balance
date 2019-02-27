@@ -2,6 +2,12 @@
 
 Multi-address balance checker for Zilliqa.
 
+## Dependencies
+
+`pip install requests`
+
+## Usage
+
 ```
 $ python balance.py --file sample_addresses
 07ca4e78d63351f9d5b1cf4327015775c77e18fc: 308527.397261
