@@ -36,12 +36,12 @@ def print_balances(filename):
     pool = multiprocessing.Pool(40)
     results = pool.map(get_balance, addresses)
     for address, current_bal in zip(addresses, results):
-        print "%s: %f" % (address, current_bal/DENOMINATOR)
+        print("%s: %f" % (address, current_bal/DENOMINATOR))
         total += current_bal
 
     current_price = get_zilliqa_price()
     zils = total/DENOMINATOR
-    print "Total: %f ($%.2f USD)" % (zils, zils * current_price)
+    print("Total: %f ($%.2f USD)" % (zils, zils * current_price))
 
 
 def get_balance(address):
